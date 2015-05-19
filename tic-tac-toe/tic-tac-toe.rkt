@@ -373,6 +373,12 @@ define board-winner(board)
 
 
 
+: board-full? : Board -> Boolean
+define board-full?(board)
+  {9 <= board.hash-count}
+
+
+
 : play : Board Side -> Play-Result
 define play(board side)
   define r
