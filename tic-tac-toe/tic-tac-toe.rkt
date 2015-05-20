@@ -8,7 +8,6 @@ require racket/list
         syntax/parse/define
         my-cond/iffy
         syntax/location
-        sweet-exp-utils/kw-let
         "utils/rmv.rkt"
         "utils/rnd-elt.rkt"
         "utils/case-type/case-type.rkt"
