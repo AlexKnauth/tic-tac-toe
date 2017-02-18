@@ -100,20 +100,7 @@ define play*-result-definitive-winner=?/c(side)(res)
     play*-result-definitive? res
     equal? res.play*-result-definitive-winner side
 
-: play*-result-combine : Play*-Result * -> Play*-Result
-define (play*-result-combine . args)
-  define-values (definative-results other-results)
-    (inst partition Play-Result Play*-Result) play-result? args
-  my-cond
-    if empty?(definative-results)
-      my-cond
-        if empty?(other-results)
-          ;play*-result-thunk-list 'X '()
-          error 'play*-result-combine "expects at least one argument"
-        else
-          error 'dontknow
-    else
-      error 'dontknow
+;; ------------------------------------------------------------------------
 
 : play* : Play*-Result-TBD -> Play*-Result
 define play*(arg)
